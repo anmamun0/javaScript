@@ -1,5 +1,25 @@
 ## Common JavaScript Objects & Methods
 
+ 
+
+| Built-in Objects | Web APIs | Other APIs |
+|-------------------------|-----------------------|--------------------------------|
+| [`Object`](#object) | [`WeakSet`](#weakset) | [`Fetch`](#fetch) |
+| [`Array`](#array) | [`WeakMap`](#weakmap) | [`WebSocket`](#websocket) |
+| [`String`](#string) | [`File`](#file) | [`CanvasRenderingContext2D`](#canvasrenderingcontext2d) |
+| [`Number`](#number) | [`Blob`](#blob) | [`AudioContext`](#audiocontext) |
+| [`Boolean`](#boolean) | [`FormData`](#formdata) | [`IntersectionObserver`](#intersectionobserver) |
+| [`Function`](#function) | [`Window`](#window) | [`Intl`](#intl) |
+| [`RegExp`](#regexp) | [`Document`](#document) | [`ServiceWorker`](#serviceworker) |
+| [`Math`](#math) | [`LocalStorage and SessionStorage`](#localstorage-and-sessionstorage) | [`Storage`](#storage) |
+| [`JSON`](#json) | [`Console`](#console) | [`URL`](#url) |
+| [`Promise`](#promise) | [`Navigator`](#navigator) | |
+| [`Set`](#set) | [`Geolocation`](#geolocation) | |
+| [`Map`](#map) | [`XMLHttpRequest`](#xmlhttprequest) | |
+ 
+
+ 
+
 ### `Object`
 - The base object from which most other objects inherit.
 - Methods:
