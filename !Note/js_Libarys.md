@@ -70,6 +70,44 @@ npm install swiper chart.js gsap quill animejs masonry-layout three fullpage.js 
 ```
 
 
+```
+ <!-- Rich Text Editor -->
+<div>
+  <label for="description" class="block text-sm font-semibold text-gray-700">Course Description</label>                      
+    <!-- Rich Text Editor (contenteditable div) -->
+
+  <div id="editor" class="mt-2 bg-white rounded-lg border border-gray-300 p-3 resize-none overflow-auto shadow-sm focus:ring-1 focus:ring-slate-400 focus:outline-none"  contenteditable="true" style="height: calc(1.5em * 9);">
+  </div>
+                                
+  <!-- Hidden Input Field -->
+    <input type="hidden" id="description" name="description" required />
+
+</div>
+
+// Initialize Quill.js editor
+var quill = new Quill('#editor', {
+  theme: 'snow',
+  placeholder: "Write the course description here...",
+  modules: {
+    toolbar: [
+      [{ header: [1, 2, 3, 4, 5, 6, false] }],
+      [{ font: [] }],
+      [{ size: ['small', false, 'large', 'huge'] }],
+      ['bold', 'italic', 'underline', 'strike'],
+      [{ color: [] }, { background: [] }],
+      [{ script: 'sub' }, { script: 'super' }],
+      [{ list: 'ordered' }, { list: 'bullet' }],
+      [{ indent: '-1' }, { indent: '+1' }],
+      [{ direction: 'rtl' }],
+      [{ align: [] }],
+      ['blockquote', 'code-block'],
+      ['link', 'image', 'video'],
+      ['clean'] // Remove formatting button
+    ]
+  }
+});
+```
+
 ### 🎡 2. Swiper.js 
 ##### 📌 Why use it?
 
