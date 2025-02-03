@@ -4,16 +4,15 @@
 
 | Method              | Description                                       |
 |--------------------|-------------------------------------------------|
-| [`append(name, value)`](#appendname-value) | Adds a new field (allows duplicates).          |
-| [`set(name, value)`](#setname-value)   | Adds or replaces a field.                      |
-| [`get(name)`](#getname)         | Returns the first value of a field.             |
-| [`getAll(name)`](#getallname)      | Returns all values of a field as an array.      |
-| [`has(name)`](#hasname)        | Checks if a field exists.                       |
-| [`delete(name)`](#deletename)     | Removes a field.                                |
-| [`entries()`](#entries)       | Returns all key-value pairs.                     |
-| [`keys()`](#keys)          | Returns all field names.                         |
-| [`values()`](#values)        | Returns all field values.                        |
-
+| [`append(name, value)`](#21-appendname-value) | Adds a new field (allows duplicates).          |
+| [`set(name, value)`](#22-setname-value)   | Adds or replaces a field.                      |
+| [`get(name)`](#23-getname)         | Returns the first value of a field.             |
+| [`getAll(name)`](#24-getallname)      | Returns all values of a field as an array.      |
+| [`has(name)`](#25-hasname)        | Checks if a field exists.                       |
+| [`delete(name)`](#26-deletename)     | Removes a field.                                |
+| [`entries()`](#27-entries)       | Returns all key-value pairs.                     |
+| [`keys()`](#28-keys)          | Returns all field names.                         |
+| [`values()`](#29-values)        | Returns all field values.                        |
  
 ```html
   <form id="form_create_course">
