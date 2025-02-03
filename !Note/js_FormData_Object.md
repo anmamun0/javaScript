@@ -248,3 +248,40 @@ formData.append("profile_picture", file);
 axios.post("https://example.com/api", formData)
      .then(response => console.log("Response:", response))
      .catch(error => console.error("Error:", error));
+```
+
+
+
+
+
+
+
+
+
+---
+
+### Multiple select input print in consol
+
+```html
+<select id="tags" name="category" multiple>
+    <option value="javascript">JavaScript</option>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <option value="web">Web Development</option>
+</select>
+```
+
+
+```js
+const formElement = document.getElementById("form_create_course");
+const formData = new FormData(formElement);
+
+const allvalue = formData.getAll('category') // output:  ['javascript', 'html'] 
+```
+
+
+
+
+
+
+
