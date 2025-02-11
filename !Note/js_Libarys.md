@@ -5,26 +5,63 @@ A curated list of popular JavaScript libraries for various web development needs
 ## 📌 Library Comparison Table
 <h6> 
 
+ 📝 Text Editors 
+
 | **Library**     | **Best For**                 | **Why Use It?** |
 |---------------|----------------------------|----------------|
 | [**Quill.js**](#-1-quilljs)   | Rich text editor          | Perfect for **blogs, CMS, and forms** with customizable toolbars and themes. |
-| [**Swiper.js**](#-2-swiperjs)  | Touch slider              | Ideal for **carousels and slideshows**, supports mobile gestures. |
-| [**AOS.js**](#-3-aosjs)       | Scroll animations         | Adds smooth animations on scroll for **landing pages and portfolios**. |
-| [**Chart.js**](#-4-chartjs)     | Data visualization        | Helps create **interactive charts and graphs** for dashboards and analytics. |
-| [**GSAP.js**](#-5-gsapjs)      | Advanced animations       | Used for **high-performance animations and interactive UIs**. |
 | [**TinyMCE**](#-6-tinymce)      | Advanced text editor      | Provides a **word-processor-like experience** with formatting, spell check, and media embedding. |
+
+ 🎠 Sliders & Carousels 
+
+| **Library**     | **Best For**                 | **Why Use It?** |
+|---------------|----------------------------|----------------|
+| [**Swiper.js**](#-2-swiperjs)  | Touch slider              | Ideal for **carousels and slideshows**, supports mobile gestures. |
+| [**Slick.js**](#-2-swiperjs)  | Touch slider              | A widely used carousel and slider library. |
 | [**Glide.js**](#-7-glidejs)     | Lightweight slider        | A **faster, lightweight alternative to Swiper.js**, supports **Vue.js & React**. |
-| [**Three.js**](#-8-threejs)    | 3D graphics               | Enables the creation of **3D models, animations, and interactive elements** for games and VR. |
+
+ 🎬 Animations 
+
+| **Library**     | **Best For**                 | **Why Use It?** |
+|---------------|----------------------------|----------------|
+| [**AOS.js**](#-3-aosjs)       | Scroll animations         | Adds smooth animations on scroll for **landing pages and portfolios**. |
+| [**GSAP.js**](#-5-gsapjs)      | Advanced animations       | Used for **high-performance animations and interactive UIs**. |
 | [**Lenis.js**](#-9-lenisjs)     | Smooth scrolling          | Ensures **buttery smooth scrolling** with optimized performance. |
 | [**Anime.js**](#-10-animejs)     | Advanced animations       | Supports **SVG, DOM elements, and JavaScript objects** for smooth, complex animations. |
-| [**Masonry.js**](#-11-masonryjs)   | Grid layouts              | Creates **Pinterest-style layouts**, ensuring elements are arranged properly. |
+
+ 📊 Data Visualization 
+
+| **Library**     | **Best For**                 | **Why Use It?** |
+|---------------|----------------------------|----------------|
+| [**Chart.js**](#-4-chartjs)     | Data visualization        | Helps create **interactive charts and graphs** for dashboards and analytics. |
+| [**D3.js**](#-4-chartjs)     | Data visualization        | A powerful library for manipulating documents based on data. |
+| [**Plotly.js**](#-4-chartjs)     | Data visualization        | A library for creating interactive charts. |
+
+ 🖼️ 3D Graphics & Visualizations 
+
+| **Library**     | **Best For**                 | **Why Use It?** |
+|---------------|----------------------------|----------------|
+| [**Three.js**](#-8-threejs)    | 3D graphics               | Enables the creation of **3D models, animations, and interactive elements** for games and VR. |
+| [**Babylon.js**](#-8-threejs)    | 3D graphics               | A 3D engine for web applications. |
+| [**P5.js**](#-8-threejs)    | 3D graphics               | A JavaScript library for creative coding (art, graphics, and interaction).|
+
+ 🎥 Media Playback 
+
+| **Library**     | **Best For**                 | **Why Use It?** |
+|---------------|----------------------------|----------------|
 | [**Plyr.js**](#-12-plyrjs)      | Custom video players      | Modern, lightweight **video player** with themes, captions, and controls. |
 | [**Howler.js**](#-13-howlerjs)    | Audio playback            | Best for **handling multiple audio tracks**, supports **looping, crossfade, and spatial audio**. |
+
+ 💬 UI Enhancements 
+
+| **Library**     | **Best For**                 | **Why Use It?** |
+|---------------|----------------------------|----------------|
 | [**Tippy.js**](#-14-tippyjs)     | Tooltips                  | Provides **highly customizable tooltips** that enhance user experience. |
+| [**Masonry.js**](#-11-masonryjs)   | Grid layouts              | Creates **Pinterest-style layouts**, ensuring elements are arranged properly. |
 | [**FullPage.js**](#-15-fullpagejs)   | Full-screen scrolling    | Ideal for **portfolios and one-page websites** with smooth transitions. |
 
-
 </h6>
+
 
 ## 📌 Installation & Usage
 
@@ -142,15 +179,24 @@ var quill = new Quill('#editor', {
 - Adds scroll animations to elements.
 - Works with CSS animations.
 - Improves user engagement.
-✨ Example: Scroll Animation
+✨ Example: Scroll Animation 
+  
+```
+<!-- Include AOS.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<div data-aos="fade-up">
+  This content will fade up when scrolling into view.
+</div>
+
+<script>
+  AOS.init();
+</script>
 
 ```
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-<div data-aos="fade-up">Fade Up Animation</div>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script> AOS.init(); </script>
+###### Explanation: This adds a "fade-up" animation to a content element when it scrolls into view, enhancing user interaction.
 
-```
 
 
 ### 📊 4. Chart.js 
@@ -184,12 +230,17 @@ var quill = new Quill('#editor', {
 🚀 Example: Smooth Animation
 
 ```
-<div id="box" style="width:100px;height:100px;background:red;"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script> gsap.to("#box", { x: 300, duration: 2, ease: "bounce.out" }); </script>
+<!-- Include GSAP.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+<div id="box" style="width:100px; height:100px; background-color:red;"></div>
+
+<script>
+  gsap.to("#box", { duration: 2, x: 300 });
+</script>
 
 ```
-
+###### Explanation: This animates the red box to move horizontally 300 pixels over 2 seconds.
 
 
 
@@ -262,38 +313,73 @@ Example: 3D Cube
  
 ### 🔥 9. Lenis.js 
 ##### 📌 Why use it?
+ 
+- Provides buttery smooth scrolling.
+- Enhances UX with inertia-based motion.
+- Works well with GSAP and other animation libraries.
+🚀 Example: Smooth Scrolling Effect 
 
-- Provides buttery smooth scrolling effects.
-- Works with GSAP, LocomotiveScroll.
-Example: Smooth Scroll
 
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis"></script>
+<!-- Include Lenis.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.0.38/lenis.min.js"></script>
+
 <script>
   const lenis = new Lenis();
-  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
   requestAnimationFrame(raf);
 </script>
 
+<style>
+  body {
+    height: 300vh; /* Adds scrollable height */
+  }
+</style>
+
 ```
+###### ✅ Explanation: This code enables smooth scrolling across the page. The Lenis instance controls scrolling behavior, making it feel more fluid and responsive. 🚀
 
 
 ### 🎭 10. Anime.js 
 ##### 📌 Why use it?
-
-- Better control over animations than GSAP.
-- Can animate SVG, CSS, and JS objects.
-Example: Animated Box
+ 
+- Best for smooth and complex animations.
+- Supports SVG, DOM elements, and JavaScript objects.
+- Lightweight and highly customizable.
+🚀 Example: Bouncing Ball Animation
 
 ```
-<div id="box" style="width:100px;height:100px;background:red;"></div>
+<!-- Include Anime.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script>
-  anime({ targets: '#box', translateX: 250, duration: 2000, easing: 'easeOutElastic' });
-</script>
 
+<div id="ball" style="width:50px; height:50px; background:red; border-radius:50%; position:absolute; top:50px;"></div>
+
+<script>
+  anime({
+    targets: "#ball",
+    translateY: [0, 300], // Move down 300px
+    direction: "alternate",
+    easing: "easeInOutQuad",
+    duration: 1000,
+    loop: true,
+  });
+</script>
+ 
 ```
+<h6>
+✅ Explanation:
+
+- The #ball moves down 300px and then back up.
+- The loop is infinite, making the ball continuously bounce.
+- easeInOutQuad ensures a smooth acceleration and deceleration. 🚀
+  
+</h6>
 
 
 
