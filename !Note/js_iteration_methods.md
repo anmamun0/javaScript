@@ -22,7 +22,7 @@
 - Purpose: Executes a function on each array element but does not return a new array.
 - Use Case: When you need to perform side effects like logging or modifying an external variable.
  
-```
+``` 
 const numbers = [1, 2, 3, 4, 5];
 
 numbers.forEach(num => console.log(num * 2)); 
@@ -41,7 +41,7 @@ Mutates external variables if used (not recommended). <br>
 - Use Case: When you need to modify data and store the result.
  
 
-```
+```js
 const numbers = [1, 2, 3, 4, 5];
 
 const doubled = numbers.map(num => num * 2);
@@ -58,7 +58,7 @@ Preferred over forEach() when transformation is needed. <br>
 - Purpose: Filters elements that satisfy a condition and returns a new array.
 - Use Case: When you want to extract specific elements from an array.
  
-```
+```js
 const numbers = [10, 25, 30, 40, 55];
 
 const evenNumbers = numbers.filter(num => num % 2 === 0);
@@ -74,7 +74,8 @@ Does not modify the original array. <br>
 - Purpose: Reduces an array into a single value (sum, average, object, etc.).
 - Use Case: When you need to calculate totals or aggregate data.
 -  Example: Sum of Array Elements:
-```
+-  
+```js
 const numbers = [1, 2, 3, 4, 5];
 
 const sum = numbers.reduce((acc, num) => acc + num, 0);
@@ -90,7 +91,7 @@ Best for cumulative operations (sum, product, etc.). <br>
 - Purpose: Finds and returns the first element that satisfies a condition.
 - Use Case: When you need to find only one matching element.
  
-```
+```js
 const users = [
   { id: 101, name: "Alice" },
   { id: 102, name: "Bob" },
@@ -110,7 +111,7 @@ Returns undefined if no match is found. <br>
 - Purpose: Like find(), but returns the index instead of the value.
 - Use Case: When you need the position of an element, not the element itself.
  
-```
+```js
 const numbers = [10, 25, 30, 40, 55];
 
 const index = numbers.findIndex(num => num > 30);
@@ -127,7 +128,7 @@ Returns -1 if no match is found. <br>
 - Purpose: Returns true if at least one element passes the condition.
 - Use Case: When you need to check for existence.
  
-```
+```js
 const numbers = [1, 3, 5, 7, 8];
 
 const hasEven = numbers.some(num => num % 2 === 0);
@@ -143,7 +144,7 @@ Returns true or false.<br>
 - Purpose: Returns true if all elements pass the condition.
 - Use Case: When you need to validate an entire array.
  
-```
+```js
 const numbers = [2, 4, 6, 8, 10];
 
 const allEven = numbers.every(num => num % 2 === 0);
@@ -160,8 +161,8 @@ Stops early if one element fails the condition. <br>
 - Purpose: Sorts an array in place (modifies the original array).
 - Use Case: When you need to sort numbers, strings, or objects.
 -  Example: Sorting Numbers
--  
-```
+
+```js
 const numbers = [40, 5, 25, 10];
 
 numbers.sort((a, b) => a - b);
@@ -178,7 +179,7 @@ Modifies the original array. <br>
 - Purpose: Simpler way to iterate over arrays.
 - Use Case: When you just need to loop through values.
  
-```
+```js
 const numbers = [1, 2, 3, 4, 5];
 
 for (const num of numbers) {
