@@ -23,12 +23,90 @@
 ### `Object`
 - The base object from which most other objects inherit.
 - Methods:
-  - `Object.keys()`: Returns an array of a given object's own enumerable property names.
-  - `Object.values()`: Returns an array of a given object's own enumerable property values.
-  - `Object.entries()`: Returns an array of a given object's own enumerable string-keyed property `[key, value]` pairs.
-  - `Object.assign()`: Copies all enumerable own properties from one or more source objects to a target object.
-  - `Object.freeze()`: Freezes an object, preventing new properties from being added and existing properties from being modified.
-  - `Object.seal()`: Seals an object, preventing new properties from being added but allows modification of existing properties.
+  - `Object.create(proto)` : 	Creates an object from a prototype.
+  - `Object.assign(target, src)` : 	Copies properties from source objects to target.
+  - `Object.keys(obj)` : Returns an array of an object's keys.
+  - `Object.values(obj)` : 	Returns an array of an object's values.
+  - `Object.entries(obj)` : 	Converts an object into an array of key-value pairs.
+  - `Object.fromEntries(arr)` : 	Converts key-value pairs array back into an object.
+  - `Object.hasOwn(obj, key)` : Checks if an object has a direct property (ES2022).
+  - `Object.freeze(obj)` : Prevents modifications to an object.
+  - `Object.seal(obj)` : 	Prevents adding/removing properties but allows modifications.
+  - `Object.getOwnPropertyNames(obj)` : Gets all property names, including non-enumerable ones.
+  - `Object.getOwnPropertyDescriptors(obj)`: 	Gets property metadata (writable, enumerable, etc.).
+  - `Object.getPrototypeOf(obj)` : 	Gets the prototype (parent object).
+  - `Object.setPrototypeOf(obj, proto)` : 	Sets the prototype of an object.
+  - `Object.is(value1, value2)` : 	Strict comparison (handles NaN correctly).
+
+<br>
+
+```js
+// Object.create()
+const person = { greet() { return "Hello!"; } };
+const student = Object.create(person);
+console.log(student.greet()); // "Hello!"
+
+// Object.assign()
+const obj1 = { a: 1 }, obj2 = { b: 2 };
+const merged = Object.assign({}, obj1, obj2);
+console.log(merged); // { a: 1, b: 2 }
+
+// Object.keys()
+const user = { name: "Alice", age: 25 };
+console.log(Object.keys(user)); // ["name", "age"]
+
+// Object.values()
+console.log(Object.values(user)); // ["Alice", 25]
+
+// Object.entries()
+console.log(Object.entries(user)); // [["name", "Alice"], ["age", 25]]
+
+// Object.fromEntries()
+const arr = [["name", "Alice"], ["age", 25]];
+console.log(Object.fromEntries(arr)); // { name: "Alice", age: 25 }
+
+// Object.hasOwn()
+console.log(Object.hasOwn(user, "name")); // true
+console.log(Object.hasOwn(user, "age")); // true
+console.log(Object.hasOwn(user, "gender")); // false
+
+// Object.freeze()
+const frozenObj = { a: 1 };
+Object.freeze(frozenObj);
+frozenObj.a = 10; // No effect
+console.log(frozenObj); // { a: 1 }
+
+// Object.seal()
+const sealedObj = { b: 5 };
+Object.seal(sealedObj);
+sealedObj.b = 10; // Allowed
+sealedObj.c = 20; // Not allowed
+console.log(sealedObj); // { b: 10 }
+
+// Object.getOwnPropertyNames()
+const objWithHidden = Object.defineProperty({}, "hidden", { value: 42, enumerable: false });
+console.log(Object.getOwnPropertyNames(objWithHidden)); // ["hidden"]
+
+// Object.getOwnPropertyDescriptors()
+console.log(Object.getOwnPropertyDescriptors(user));
+
+// Object.getPrototypeOf()
+console.log(Object.getPrototypeOf(student)); // { greet: [Function: greet] }
+
+// Object.setPrototypeOf()
+const parent = { greet() { return "Hi!"; } };
+const child = {};
+Object.setPrototypeOf(child, parent);
+console.log(child.greet()); // "Hi!"
+
+// Object.is()
+console.log(Object.is(5, 5)); // true
+console.log(Object.is(NaN, NaN)); // true
+console.log(Object.is(0, -0)); // false
+
+```
+
+
 
 ### `Array`
 - Used to store ordered collections of values.
