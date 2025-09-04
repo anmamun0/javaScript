@@ -39,7 +39,7 @@ Example:
 
 ---
 
-## 🔹 2. Selectors
+# 🔹 2. Selectors
 
 #### 1. Basic Selectors
 ```js
@@ -284,7 +284,50 @@ $("p").slice(1, 3) // select 2nd and 3rd <p>
 <br>
 
 
-## 🔹 3. Events
+# 🔹 3. Events
+
+# jQuery Events Summary
+<h6>
+
+| Method | Description |
+|--------|-------------|
+| `.click(handler)` | Triggered when an element is clicked. |
+| `.dblclick(handler)` | Triggered when an element is double-clicked. |
+| `.mouseenter(handler)` | Triggered when the mouse enters the element. |
+| `.mouseleave(handler)` | Triggered when the mouse leaves the element. |
+| `.hover(handlerIn, handlerOut)` | Shortcut for `mouseenter` + `mouseleave`. |
+| `.mousedown(handler)` | Triggered when a mouse button is pressed down. |
+| `.mouseup(handler)` | Triggered when a mouse button is released. |
+| `.mousemove(handler)` | Triggered when the mouse moves over an element. |
+| `.keydown(handler)` | Triggered when a key is pressed down. |
+| `.keypress(handler)` | Triggered when a key is pressed (**deprecated**). |
+| `.keyup(handler)` | Triggered when a key is released. |
+| `.submit(handler)` | Triggered when a form is submitted. |
+| `.change(handler)` | Triggered when input, select, or textarea value changes. |
+| `.focus(handler)` | Triggered when an element gains focus. |
+| `.blur(handler)` | Triggered when an element loses focus. |
+| `.select(handler)` | Triggered when text in an input/textarea is selected. |
+| `.input(handler)` | Triggered when user types (live typing detection). |
+| `.ready(handler)` | Triggered when the DOM is fully loaded. |
+| `.resize(handler)` | Triggered when the window is resized. |
+| `.scroll(handler)` | Triggered when the user scrolls. |
+| `.on(event, selector, handler)` | Attach event(s) dynamically (**best practice**). |
+| `.off(event)` | Remove an event handler. |
+| `.trigger(event)` | Manually trigger an event. |
+| `.one(event, handler)` | Run the event handler only once. |
+
+---
+
+## Event Object (Summary)
+- `event.type` → Event type (`click`, `keydown`, etc.)  
+- `event.pageX / event.pageY` → Mouse position on the page  
+- `event.which` → Which mouse button or key was pressed  
+- `event.target` → Element that triggered the event  
+- `event.preventDefault()` → Stop default behavior (e.g., form submit)  
+- `event.stopPropagation()` → Stop event bubbling  
+
+ 
+</h6>
 
 #### 1. Mouse Events
 ```js
@@ -475,7 +518,7 @@ $(document).ready(function () {
 
 
 
-## 🔹 4. Effects & Animations
+# 🔹 4. Effects & Animations
 
 `.hide()`, `.show()`
 `.toggle()`
@@ -484,6 +527,29 @@ $(document).ready(function () {
 `.slideUp()`, `.slideDown()` , `.slideToggle()`
 `.animate()`	Custom CSS animation
 `.stop()`
+
+
+#### jQuery Effects & Animations Summary
+
+<h6>
+
+| Method | Description |
+|--------|-------------|
+| `.hide([speed, easing, callback])` | Hides elements (optionally with animation). |
+| `.show([speed, easing, callback])` | Shows hidden elements. |
+| `.toggle([speed, easing, callback])` | Toggles between show and hide. |
+| `.fadeIn([speed, easing, callback])` | Fades in hidden elements. |
+| `.fadeOut([speed, easing, callback])` | Fades out visible elements. |
+| `.fadeToggle([speed, easing, callback])` | Toggles fade in/out. |
+| `.fadeTo(speed, opacity, [easing, callback])` | Fades to a specific opacity. |
+| `.slideUp([speed, easing, callback])` | Slides element up (hides it). |
+| `.slideDown([speed, easing, callback])` | Slides element down (shows it). |
+| `.slideToggle([speed, easing, callback])` | Toggles between slide up/down. |
+| `.animate(properties, [speed, easing, callback])` | Animates multiple CSS properties. |
+| `.stop([clearQueue, jumpToEnd])` | Stops current animation (and optionally clears queue/jumps to end). |
+| **Chaining** | Multiple effects/animations can be chained together. |
+  
+</h6>
 
 
 
@@ -1036,13 +1102,23 @@ console.log(data);
 
 
 
-## 🔹 8. jQuery AJAX
+# 🔹 8. jQuery AJAX
+
+#### Asynchronous JavaScript And XML
+
+Explanation:
+- `Asynchronous` → Requests happen in the background without reloading the whole page.
+- `JavaScript` → The language used to send/receive the request.
+- `And` → Just a connector word .
+- `XML` → Originally used for data exchange, but nowadays JSON is more common.
+
+#### So, AJAX = A technique to send/receive data between the browser and server asynchronously using JavaScript (usually with JSON instead of XML).
+
 ```js
 .load() → load data from server
 $.get() / $.post()
 $.ajax() (full control)
 ```
-
 
 #### 1. Basic AJAX Call
 
