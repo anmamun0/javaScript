@@ -40,6 +40,7 @@ Example:
 ---
 
 # 🔹 2. Selectors
+[Home](#table-of-contents)
 
 #### 1. Basic Selectors
 ```js
@@ -285,8 +286,9 @@ $("p").slice(1, 3) // select 2nd and 3rd <p>
 
 
 # 🔹 3. Events
+[Home](#table-of-contents)
 
-# jQuery Events Summary
+# jQuery Events Summary 
 <h6>
 
 | Method | Description |
@@ -519,6 +521,7 @@ $(document).ready(function () {
 
 
 # 🔹 4. Effects & Animations
+[Home](#table-of-contents)
 
 `.hide()`, `.show()`
 `.toggle()`
@@ -751,6 +754,7 @@ $(document).ready(function(){
  
 
 ## 🔹 5. DOM Manipulation
+[Home](#table-of-contents)
 
 <h6> 
  
@@ -886,6 +890,8 @@ $("#add").click(function() {
 
 
 ## 🔹 6. Traversing (DOM Navigation)
+[Home](#table-of-contents)
+
 
 <h6> 
  
@@ -1012,7 +1018,8 @@ $("ul").has("li.active");
 
 
 
-## jQuery Forms Methods & Events
+# jQuery Forms Methods & Events
+[Home](#table-of-contents)
 
 #### 1. Getting / Setting Values
 
@@ -1103,6 +1110,7 @@ console.log(data);
 
 
 # 🔹 8. jQuery AJAX
+[Home](#table-of-contents)
 
 #### Asynchronous JavaScript And XML
 
@@ -1235,7 +1243,8 @@ $.get("data.txt", function(data) {
 
 
 
-## 🔹 9. jQuery Advanced
+# 🔹 9. jQuery Advanced
+[Home](#table-of-contents)
 
 Chaining:
 ```js
@@ -1354,7 +1363,8 @@ console.log($("#box").data("key")); // Retrieve data
 
 
 
-## 🔹 10. Responsive + jQuery
+# 🔹 10. Responsive + jQuery
+[Hom](#table-of-contents)
 
 #### Toggle menu on mobile:
 ```js
